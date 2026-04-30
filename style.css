@@ -1,0 +1,42 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-blue: #19384d;
+  --bg-color: #fcfaf5;
+  --text-color: #333333;
+  --accent-green: #5f8a7e;
+  --braco: #ffffff;
+}
+body {
+  background-color: var(--bg-color);
+}
+
+h2,
+.cta-button {
+  font-family: "Montserrat", sans-serif;
+}
+
+p,
+li {
+  font-family: "Open Sans", sans-serif;
+  line-height: 1.6;
+}
+
+.hero-section {
+  display: flex;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 70px;
+  background-image: url(./assets/background-hero.webp);
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+}

@@ -3,33 +3,48 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@400;600&family=Permanent+Marker&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style.css" />
     <title>Cuide-se</title>
   </head>
   <body>
-    <section class="hero">
-      <button class="btn-book-disponible">LIVRO DISPONIVEL</button>
-      <h1 class="hero-title">CUIDE-SE</h1>
-      <p class="hero-paragraph">
-        A Conexão Invisivel entre Emoções, Sono e Saúde
-        Cardiovascular-Renal-Metabólica
-      </p>
-      <h2 class="hero-sub-title">Visão geral do livro</h2>
-      <p>Você nao precisa de mais informação.</p>
-      <p>Você Precisa mudar o rumo da sua vida</p>
-      <button class="btn-buy-book">
-        <img class="icon" src="./assets/favicon.ico" alt="icone livro" /> Quero
-        meu Exemplar
-      </button>
+    <section class="hero-section">
+      <div class="container">
+        <div class="top-tag">
+          <span class="material-symbols-outlined"> menu_book </span>LIVRO
+          DISPONIVEL
+        </div>
+
+        <h1 class="hero-title">CUIDE-SE</h1>
+
+        <p class="hero-paragraph">
+          A Conexão Invisivel entre Emoções, Sono e Saúde
+          Cardiovascular-Renal-Metabólica
+        </p>
+        
+        <div class="hero-description">
+          <h2 class="hero-sub-title">Visão geral do livro</h2>
+          <p>Você nao precisa de mais informação.</p>
+          <p>Você Precisa <strong>mudar o rumo da sua vida</strong></p>
+        </div>
+
+        <button class="btn-buy-book">
+          <span class="material-symbols-outlined icon-health"> menu_book </span
+          >QUERO MEU EXEMPLAR
+        </button>
+      </div>
     </section>
 
     <section class="hightlight">
       <div class="card">
-        <img
-          src="./assets/estetoscopio-icon.png"
-          alt="icone estetoscopio"
-          class="class-incon"
-        />
+        <span class="material-symbols-outlined icon-health"> stethoscope </span>
         <div class="card-descrition">
           <p>
             Escrito por um medico com mais de <strong>25 anos</strong> de
@@ -39,22 +54,16 @@
       </div>
 
       <div class="card">
-        <img
-          src="./assets/coracao-icon.png"
-          alt="icone coração"
-          class="class-icon"
-        />
+        <span class="material-symbols-outlined icon-health"> favorite </span>
         <div class="card-descrition">
           <p>Linguagem leve, humana, pronfundamente <strong>pratica</strong></p>
         </div>
       </div>
 
       <div class="card">
-        <img
-          src="./assets/escudo-icon.png"
-          alt="icone escudo"
-          class="class-icon"
-        />
+        <span class="material-symbols-outlined icon-health">
+          verified_user
+        </span>
         <div class="card-descrition">
           <p>
             Um guia para quem deseja viver com mais
@@ -71,6 +80,7 @@
         radicalismos. sem fórmulas milagrosas
       </h4>
       <div class="sub-about">
+        <span class="material-symbols-outlined icon-health"> psychiatry </span>
         <h4>
           Aqui, você vai entender como pequenas mudanças sustentadas no dia a
           dia, podem <strong>transformar profundamente</strong> sua saúde, sua
@@ -113,26 +123,35 @@
       </div>
 
       <div class="localization">
+        <span class="material-symbols-outlined icon-health"> location_on </span>
         <h4>
           Escrito a beira-mar, na Praia do Francês(AL). Cuide-se é um guia
           pratico para quem deseja:
         </h4>
         <div class="card">
+          <span class="material-symbols-outlined icon-health"> nature </span>
           <card class="card-descrition">
             <p>Viver com mais equilibrio</p>
           </card>
         </div>
         <div class="card">
+          <span class="material-symbols-outlined icon-health">
+            self_improvement
+          </span>
           <div class="card-descrition">
             <p>Melhorar sua qualidade de vida</p>
           </div>
         </div>
         <div class="card">
+          <span class="material-symbols-outlined icon-health"> nutrition </span>
           <div class="card-descrition">
             <p>Construir hábitos saudaveis de forma consistente</p>
           </div>
         </div>
-        <div class="car">
+        <div class="card">
+          <span class="material-symbols-outlined icon-health">
+            verified_user
+          </span>
           <div class="card-descrition">
             <p>Assumir o controle da prória saúde</p>
           </div>
