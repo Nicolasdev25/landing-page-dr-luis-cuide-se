@@ -9,34 +9,204 @@
   --bg-color: #fcfaf5;
   --text-color: #333333;
   --accent-green: #5f8a7e;
-  --braco: #ffffff;
+  --branco: #ffffff;
 }
 body {
-  background-color: var(--bg-color);
+  background-color: #EFE2CC;
+  
 }
 
-h2,
+section{
+  padding: 5px;
+}
+
+
+strong {
+  color: var(--primary-blue);
+}
+
+h2,h4
 .cta-button {
   font-family: "Montserrat", sans-serif;
 }
 
 p,
 li {
+  color: var(--text-color);
   font-family: "Open Sans", sans-serif;
   line-height: 1.6;
 }
 
-.hero-section {
+.top-tag {
+  width: fit-content;
   display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  margin: 0 auto 10px;
+  padding: 6px 14px;
+  font-size: 0.6rem;
+  font-weight: bold;
+  color: var(--primary-blue);
+  font-family: "Montserrat", sans-serif;
+  background-color: var(--branco);
+  border-radius: 999px;
+  text-align: center;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.top-tag .material-symbols-outlined {
+  font-size: 0.9rem;
+}
+
+.hero-section {
+  background-image: url(./assets/background-hero.webp);
+  background-size: cover;
+  background-position: center top;
+  width: 100%;
+  min-height: 530px;
+  background-repeat: no-repeat;
+}
+
+.hero-title {
+  font-size: 3rem;
+  font-family: "Permanent Marker", cursive;
+  font-weight: bold;
+  font-style: normal;
+  color: var(--primary-blue);
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.hero-paragraph {
+  font-size: 1rem;
+  color: var(--primary-blue);
+  font-weight: bold;
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+.hero-description .hero-sub-title {
+  color: var(--primary-blue);
+  padding: 10px 0;
+  text-align: left;
+}
+.hero-description p {
+  font-size: 1rem;
+  max-width: 250px;
+  text-align: left;
+  padding-bottom: 10px;
+  color: black;
+}
+
+.btn-buy-book {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  max-width: 330px;
+  color: var(--branco);
+  background-color: var(--primary-blue);
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  font-family: "Montserrat", sans-serif;
+}
+
+.hightlight{
+  background-color: var(--primary-blue);
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 18px;
+  color: var(--branco);
+  margin: -28px auto 10px;
+  padding: 10px;
+  border-radius: 18px;
+  
+}
+.card{
+  flex: 1;
+  text-align: center;
+}
+
+.card .icon-health{
+  color: var(--branco);
+  font-size: 2.4rem;
+  margin-bottom: 10px;
+}
+.card-descrition p{
+  text-align: center;
+  color: var(--branco);
+  font-size: 0.85rem;
+  font-weight: 600;
+  line-height: 1.45;
+}
+.card-descrition strong{
+  color: var(--branco);
+}
+
+.about{
+  background-color: var(--branco);
+  display: flex;
   flex-direction: column;
-  padding: 70px;
-  background-image: url(./assets/background-hero.webp);
-  background-size: cover;
-  background-position: center;
-  width: 100%;
-  height: 100%;
-  background-repeat: no-repeat;
+  border-radius: 10px;
+  margin: 10px
+  
+}
+
+.about h4{
+  padding: 10px;
+}
+
+.sub-about{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--bg-color);
+  padding: 10px;
+  border-radius: 10px;
+  margin: 10px 20px;
+}
+.sub-about .icon-health{
+  color: var(--primary-blue);
+  font-size: 2.4rem;
+  margin: 0 10px 0 0;
+}
+
+.benefits-book{
+  background-color: var(--branco);
+  padding-left: 30px;
+  border-radius: 10px;
+  margin: 10px;
+}
+.benefits-book h3{
+  color: var(--primary-blue);
+  padding-bottom: 10px;
+}
+.benefits-book ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.benefits-book li {
+  color: var(--primary-blue);
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.benefits-book li::before {
+  content: "✓";
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: var(--primary-blue);
+  color: var(--branco);
+  font-weight: bold;
 }
