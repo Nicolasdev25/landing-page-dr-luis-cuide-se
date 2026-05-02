@@ -10,23 +10,23 @@
   --text-color: #333333;
   --accent-green: #5f8a7e;
   --branco: #ffffff;
+  --bg-icon: #f0ece6;
 }
 body {
-  background-color: #EFE2CC;
-  
+  background-color: #efe2cc;
 }
 
-section{
+section {
   padding: 5px;
 }
 
-
 strong {
   color: var(--primary-blue);
+  font-weight: bold;
 }
 
-h2,h4
-.cta-button {
+h2,
+h4 .cta-button {
   font-family: "Montserrat", sans-serif;
 }
 
@@ -65,12 +65,12 @@ li {
   background-size: cover;
   background-position: center top;
   width: 100%;
-  min-height: 530px;
+  min-height: 450px;
   background-repeat: no-repeat;
 }
 
 .hero-title {
-  font-size: 3rem;
+  font-size: 2.7rem;
   font-family: "Permanent Marker", cursive;
   font-weight: bold;
   font-style: normal;
@@ -80,7 +80,7 @@ li {
   align-items: center;
 }
 .hero-paragraph {
-  font-size: 1rem;
+  font-size: 0.8rem;
   color: var(--primary-blue);
   font-weight: bold;
   text-align: center;
@@ -96,8 +96,9 @@ li {
   font-size: 1rem;
   max-width: 250px;
   text-align: left;
-  padding-bottom: 10px;
+  padding-bottom: 5px;
   color: black;
+  font-weight: bold;
 }
 
 .btn-buy-book {
@@ -105,6 +106,7 @@ li {
   align-items: center;
   justify-content: center;
   width: fit-content;
+  gap: 10px;
   max-width: 330px;
   color: var(--branco);
   background-color: var(--primary-blue);
@@ -114,7 +116,7 @@ li {
   font-family: "Montserrat", sans-serif;
 }
 
-.hightlight{
+.hightlight {
   background-color: var(--primary-blue);
   display: flex;
   align-items: flex-start;
@@ -124,43 +126,41 @@ li {
   margin: -28px auto 10px;
   padding: 10px;
   border-radius: 18px;
-  
 }
-.card{
+.card {
   flex: 1;
   text-align: center;
 }
 
-.card .icon-health{
+.card .icon-health {
   color: var(--branco);
   font-size: 2.4rem;
   margin-bottom: 10px;
 }
-.card-descrition p{
+.card-descrition p {
   text-align: center;
   color: var(--branco);
   font-size: 0.85rem;
   font-weight: 600;
   line-height: 1.45;
 }
-.card-descrition strong{
+.card-descrition strong {
   color: var(--branco);
 }
 
-.about{
+.about {
   background-color: var(--branco);
   display: flex;
   flex-direction: column;
   border-radius: 10px;
-  margin: 10px
-  
+  margin: 10px;
 }
 
-.about h4{
+.about h4 {
   padding: 10px;
 }
 
-.sub-about{
+.sub-about {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -169,19 +169,19 @@ li {
   border-radius: 10px;
   margin: 10px 20px;
 }
-.sub-about .icon-health{
+.sub-about .icon-health {
   color: var(--primary-blue);
   font-size: 2.4rem;
   margin: 0 10px 0 0;
 }
 
-.benefits-book{
+.benefits-book {
   background-color: var(--branco);
   padding-left: 30px;
   border-radius: 10px;
   margin: 10px;
 }
-.benefits-book h3{
+.benefits-book h3 {
   color: var(--primary-blue);
   padding-bottom: 10px;
 }
@@ -196,6 +196,7 @@ li {
   align-items: flex-start;
   gap: 10px;
   margin-bottom: 12px;
+  font-weight: bold;
 }
 
 .benefits-book li::before {
@@ -209,4 +210,105 @@ li {
   background-color: var(--primary-blue);
   color: var(--branco);
   font-weight: bold;
+}
+
+.localization {
+  background-color: var(--bg-color);
+  padding-left: 30px;
+  border-radius: 10px;
+  margin: 10px;
+}
+
+.localization h4 {
+  color: var(--primary-blue);
+  padding-bottom: 10px;
+}
+
+.description-localization {
+  color: var(--primary-blue);
+  display: flex;
+}
+
+.description-localization .icon-health {
+  font-weight: bolder;
+  padding: 10px;
+}
+
+.new-benefctis {
+  background-color: var(--branco);
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 18px;
+  color: var(--branco);
+  margin: auto 10px;
+  padding: 10px;
+  border-radius: 18px;
+}
+
+.new-benefctis .card-descrition p {
+  color: var(--primary-blue);
+ font-size: 0.85rem;
+  font-weight: 600;
+  line-height: 1.45;
+}
+
+.card-beneficts .icon-health {
+  background-color: var(--bg-icon);
+  border-radius: 50px;
+  padding: 10px;
+  color: var(--primary-blue);
+  font-size: 3rem;
+  margin: 0 10px 0 0;
+}
+.card-beneficts {
+  flex: 1;
+  text-align: center;
+  
+}
+
+footer{
+  background-color: var(--bg-color);
+  padding-left: 30px;
+  padding: 30px;
+  border-radius: 10px;
+  margin: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+footer h2{
+  font-size: 2rem;
+  color: var(--primary-blue);
+  margin-top: 10px;
+  padding-bottom: 5px;
+}
+
+footer h3{
+  font-size: 1.5rem;
+  color: var(--primary-blue);
+}
+
+footer p{
+  text-align: center;
+  color: var(--text-color);
+  font-weight: bold;
+  padding-bottom: 10px;
+}
+
+.btn-buy-2{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  gap: 10px;
+  min-width: 500px;
+  color: var(--branco);
+  background-color: var(--primary-blue);
+  padding: 20px 30px;
+  border-radius: 10px;
+  border: none;
+  font-family: "Montserrat", sans-serif;
 }
