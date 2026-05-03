@@ -11,13 +11,33 @@
   --accent-green: #5f8a7e;
   --branco: #ffffff;
   --bg-icon: #f0ece6;
+  --content-width: 1200px;
 }
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: #efe2cc;
+  overflow-x: hidden;
+}
+
+section,
+footer {
+  width: calc(100% - 20px);
+  max-width: var(--content-width);
+  margin: 10px auto;
 }
 
 section {
-  padding: 5px;
+  border-radius: 20px;
+  padding: 24px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+img {
+  max-width: 100%;
 }
 
 strong {
@@ -26,7 +46,9 @@ strong {
 }
 
 h2,
-h4 .cta-button {
+h3,
+h4,
+button {
   font-family: "Montserrat", sans-serif;
 }
 
@@ -35,6 +57,13 @@ li {
   color: var(--text-color);
   font-family: "Open Sans", sans-serif;
   line-height: 1.6;
+}
+a {
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
 }
 
 .top-tag {
@@ -63,10 +92,14 @@ li {
 .hero-section {
   background-image: url(./assets/background-hero.webp);
   background-size: cover;
-  background-position: center top;
-  width: 100%;
+  background-position: 58% center;
   min-height: 450px;
   background-repeat: no-repeat;
+  margin-top: 0;
+}
+
+.container {
+  width: 100%;
 }
 
 .hero-title {
@@ -113,7 +146,10 @@ li {
   padding: 10px;
   border-radius: 10px;
   border: none;
-  font-family: "Montserrat", sans-serif;
+  transition: transform 0.3s ease;
+}
+.btn-buy-book:hover {
+  transform: translateX(8px);
 }
 
 .hightlight {
@@ -153,7 +189,6 @@ li {
   display: flex;
   flex-direction: column;
   border-radius: 10px;
-  margin: 10px;
 }
 
 .about h4 {
@@ -179,7 +214,6 @@ li {
   background-color: var(--branco);
   padding-left: 30px;
   border-radius: 10px;
-  margin: 10px;
 }
 .benefits-book h3 {
   color: var(--primary-blue);
@@ -214,9 +248,15 @@ li {
 
 .localization {
   background-color: var(--bg-color);
+  display: flex;
+  align-items: center;
+  gap: 24px;
   padding-left: 30px;
   border-radius: 10px;
-  margin: 10px;
+}
+
+.localization-text {
+  flex: 1;
 }
 
 .localization h4 {
@@ -234,21 +274,34 @@ li {
   padding: 10px;
 }
 
+.localization-image {
+  flex: 0 0 38%;
+  max-width: 420px;
+}
+
+.localization-image img {
+  display: block;
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
 .new-benefctis {
   background-color: var(--branco);
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
+  flex-wrap: wrap;
   gap: 18px;
   color: var(--branco);
-  margin: auto 10px;
   padding: 10px;
   border-radius: 18px;
 }
 
 .new-benefctis .card-descrition p {
   color: var(--primary-blue);
- font-size: 0.85rem;
+  font-size: 0.85rem;
   font-weight: 600;
   line-height: 1.45;
 }
@@ -262,53 +315,329 @@ li {
   margin: 0 10px 0 0;
 }
 .card-beneficts {
-  flex: 1;
+  flex: 1 1 calc(50% - 18px);
   text-align: center;
-  
 }
 
-footer{
-  background-color: var(--bg-color);
-  padding-left: 30px;
+.cta-footer {
+  background-image:
+    linear-gradient(rgba(252, 250, 245, 0.72), rgba(252, 250, 245, 0.72)),
+    url(./assets/background-hero.webp);
+  background-size: 180%;
+  background-position: left 62%;
+  background-repeat: no-repeat;
   padding: 30px;
   border-radius: 10px;
-  margin: 10px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+  text-align: center;
+  overflow: hidden;
 }
 
-footer h2{
+.cta-footer h2 {
   font-size: 2rem;
   color: var(--primary-blue);
   margin-top: 10px;
   padding-bottom: 5px;
 }
 
-footer h3{
+.cta-footer h3 {
   font-size: 1.5rem;
   color: var(--primary-blue);
 }
 
-footer p{
+.cta-footer p {
   text-align: center;
   color: var(--text-color);
   font-weight: bold;
   padding-bottom: 10px;
 }
 
-.btn-buy-2{
+.btn-buy-2 {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: var(--primary-blue);
+  color: var(--branco);
+  padding: 12px 20px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 600;
+  border: none;
+  transition: transform 0.3s ease;
+}
+.btn-buy-2:hover {
+  transform: translateX(8px);
+}
+
+.developer-footer {
+  background-color: var(--primary-blue);
+  border-radius: 10px;
+  padding: 18px;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: fit-content;
-  gap: 10px;
-  min-width: 500px;
+  flex-direction: column;
+  gap: 14px;
+  text-align: center;
+}
+
+.developer-brand p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
   color: var(--branco);
-  background-color: var(--primary-blue);
-  padding: 20px 30px;
-  border-radius: 10px;
-  border: none;
-  font-family: "Montserrat", sans-serif;
+  font-size: 0.85rem;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.developer-logo {
+  width: 72px;
+  height: 72px;
+  object-fit: contain;
+}
+
+.developer-socials {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.developer-socials a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  background-color: var(--bg-color);
+  border-radius: 50%;
+  text-decoration: none;
+  transition:
+    transform 0.2s ease,
+    background-color 0.2s ease;
+}
+
+.developer-socials a:hover {
+  transform: translateY(-2px);
+  background-color: var(--accent-green);
+  color: var(--branco);
+}
+
+.developer-socials img {
+  width: 24px;
+  height: 24px;
+}
+
+@media (max-width: 767px) {
+  .localization {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 24px;
+  }
+
+  .localization-image {
+    max-width: none;
+    width: 100%;
+  }
+
+  .localization-image img {
+    height: 220px;
+  }
+
+  .cta-footer {
+    background-size: 230%;
+    background-position: left 64%;
+  }
+}
+
+@media (min-width: 768px) {
+  section,
+  footer {
+    width: calc(100% - 48px);
+    padding: 34px;
+  }
+
+  .hero-section {
+    min-height: 560px;
+    padding: 42px;
+    background-position: center;
+  }
+
+  .hero-title {
+    font-size: 4rem;
+  }
+
+  .hero-paragraph {
+    max-width: 620px;
+    margin: 0 auto;
+    font-size: 1rem;
+  }
+
+  .hero-description p {
+    max-width: 360px;
+  }
+
+  .btn-buy-book {
+    padding: 14px 18px;
+    font-size: 0.95rem;
+  }
+
+  .hightlight {
+    padding: 24px;
+    gap: 24px;
+  }
+
+  .card .icon-health {
+    font-size: 3rem;
+  }
+
+  .card-descrition p {
+    font-size: 0.95rem;
+  }
+
+  .about h4,
+  .localization h4 {
+    font-size: 1.05rem;
+    line-height: 1.6;
+  }
+
+  .benefits-book h3 {
+    font-size: 1.45rem;
+  }
+
+  .benefits-book li {
+    font-size: 1rem;
+  }
+
+  .localization-image img {
+    height: 300px;
+  }
+
+  .card-beneficts {
+    flex-basis: calc(25% - 18px);
+  }
+
+  .cta-footer {
+    padding: 42px;
+  }
+
+  .developer-footer {
+    padding: 20px 24px;
+  }
+}
+
+@media (min-width: 1024px) {
+  section,
+  footer {
+    width: calc(100% - 64px);
+  }
+
+  .hero-section {
+    min-height: 640px;
+    padding: 56px;
+  }
+
+  .container {
+    max-width: 540px;
+  }
+
+  .top-tag {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .hero-title {
+    justify-content: flex-start;
+    font-size: 5.2rem;
+  }
+
+  .hero-paragraph {
+    margin-left: 0;
+    margin-right: 0;
+    text-align: left;
+    font-size: 1.08rem;
+  }
+
+  .hero-description .hero-sub-title {
+    font-size: 2rem;
+  }
+
+  .hero-description p {
+    font-size: 1.15rem;
+  }
+
+  .about,
+  .benefits-book,
+  .localization,
+  .new-benefctis,
+  .cta-footer,
+  .developer-footer {
+    border-radius: 18px;
+  }
+
+  .about {
+    padding: 42px 56px;
+  }
+
+  .sub-about {
+    margin: 24px 40px 0;
+    padding: 22px;
+  }
+
+  .benefits-book {
+    padding: 42px 56px;
+  }
+
+  .localization {
+    padding: 42px 56px;
+    gap: 36px;
+  }
+
+  .localization-image {
+    flex-basis: 40%;
+    max-width: 460px;
+  }
+
+  .localization-image img {
+    height: 320px;
+  }
+
+  .new-benefctis {
+    padding: 28px;
+  }
+
+  .cta-footer {
+    padding: 56px 72px;
+    background-size: 140%;
+    background-position: left 58%;
+  }
+
+  .cta-footer h2 {
+    font-size: 2.4rem;
+  }
+
+  .cta-footer h3 {
+    font-size: 1.9rem;
+  }
+
+  .cta-footer p {
+    font-size: 1.05rem;
+  }
+
+  .developer-brand p {
+    font-size: 0.95rem;
+  }
+
+  .developer-logo {
+    width: 86px;
+    height: 86px;
+  }
+
+  .developer-socials a {
+    width: 48px;
+    height: 48px;
+  }
 }
